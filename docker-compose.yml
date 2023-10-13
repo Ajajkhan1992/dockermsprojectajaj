@@ -1,25 +1,25 @@
 version: '3.8'
 services:
   movies:
-    image: Ajajkhan1992/movies:latest
+    image: ajajkhan1/dth:v1
     ports:
       - "81:80"
     deploy:
       replicas: 3
   train:
-    image: Ajajkhan1992/train:latest
+    image: ajajkhan1/train:v1
     ports:
       - "82:80"
     deploy:
       replicas: 3
   dth:
-    image: Ajajkhan1992/dth:latest
+    image: ajajkhan1/recharge:v1
     ports:
       - "83:80"
     deploy:
       replicas: 3
   recharge:
-    image: Ajajkhan1992/recharge:latest
+    image: ajajkhan1/movies:v1
     ports:
       - "84:80"
     deploy:
